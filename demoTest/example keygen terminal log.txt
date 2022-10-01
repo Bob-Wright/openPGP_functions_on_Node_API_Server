@@ -1,0 +1,28 @@
+ubuntu@syntheticreality:~/portalPGP$ sudo node server
+dirname --  /home/ubuntu/portalPGP/
+HTTPS Server running on port 8080
+DB Connected
+
+==== generate key pair ====
+POST email value:  itzbobwright@gmail.com
+get key parameters successful.
+dbUserdata -- [
+  {
+    "firstname": "Bob",
+    "lastname": "Wright",
+    "factors": "odd,even,even,yes,yesyes,no,odd,ck144,Bob"
+  }
+]
+get user data successful.
+generated private key --
+generated public key --
+Private Key filename --  /home/ubuntu/portalPGP/data/BobWright-rsa4096.prv
+// private key file written successfully at 2022/10/01 15:18
+Public Key filename --  /home/ubuntu/portalPGP/data/BobWright-rsa4096.pub
+// public key file written successfully at 2022/10/01 15:18
+prkey exists --  false
+pukey exists --  true
+inserted private key record
+updated public key record
+A PGP Key File pair was saved at 2022/10/01 15:18
+==== keygen function complete ====
