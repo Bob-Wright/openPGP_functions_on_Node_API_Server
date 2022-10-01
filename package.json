@@ -1,0 +1,22 @@
+{
+  "name": "portalpgp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node keygen.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "date-and-time": "^2.3.1",
+    "dateformat": "^5.0.3",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "openpgp": "^5.2.1",
+    "sync-mysql": "^3.0.1"
+  }
+}
