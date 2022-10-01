@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Messenga API Demo</title>
+	<!-- <base href="./"> -->
+	<base href="./">
+    <meta name="description" content="part of the Synthetic Reality Storybook comic book gallery">
+    <meta name="author" content="Bob Wright and other contributors">
+    <!-- Bootstrap core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+   <!--    <link rel="manifest" href="site.webmanifest"> -->
+	<link rel="icon" href="../favicon.ico" type="image/ico"/>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+<script src="../js/jquery.min.js"></script>
+<script src= "../js/bootstrap.min.js"></script>
+<style>
+.pageWrapper:before {
+    content: ' ';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+/*	background: #008; */
+	z-index: -1;
+    opacity: 0.4;
+    background-image: url("../images/RockwallBackground.jpg");
+	background-position: top center;
+    background-repeat: no-repeat;
+    -ms-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+body {
+width: 100%;
+ font-size: 2.4vw;
+ overflow-x: hidden;
+}
+main {
+width: 100%;
+}
+h1 {
+font-size: 3vw;
+color: indigo;
+}
+h2 {
+font-size: 2vw;
+color: blue;
+}
+h3 {
+font-size: 1.5vw;
+color: black;
+}
+h4 {
+font-size: 1vw;
+}
+a:focus, a:hover {
+  /*background-color: GreenYellow;*/
+  	outline: .5vw solid GreenYellow;
+	outline-offset: .1vw;
+	cursor: pointer;
+}
+input:focus, input:hover {
+  /*background-color: GreenYellow;*/
+  	outline: .5vw solid GreenYellow;
+	outline-offset: .1vw;
+	cursor: pointer;
+}
+button.gallery {
+background: rgba(0,0,0,0);
+border: 0;
+}
+button:focus, button:hover {
+  background-color: GreenYellow;
+  	outline: .5vw solid #b22242;
+}
+.jumbotron {
+padding-top: 1vw;
+}
+</style>
+</head>
+<!-- Page display begins -->
+<body class="pageWrapper">
+<main class="container" role="main">
+<div class="jumbotron">
+<h1>Messenga openPGPjs Node Server API Demo</h1>
+<h2> Send make keyz Posts to Messenga </h2>
+	<form action="https://messenga.net:8080/keygen" method="post" enctype="text">
+    <button type="submit" name="email" value="itzbobwright@gmail.com" style="background:#f3ff86;"><h3> Create a user key pair </h3></button>
+  </form>
+	<form action="https://messenga.net:8080/keygen" method="post" enctype="text">
+    <button type="submit" name="email" value="messenga@messenga.net" style="background:#f3ff86;"><h3> Create a signing key pair for messenga </h3></button>
+  </form>
+	<form action="https://messenga.net:8080/keygen" method="post" enctype="text">
+    <button type="submit" name="email" value="syntheticreality@syntheticreality.net" style="background:#f3ff86;"><h3> Create a signing key pair for syntheticreality </h3></button>
+  </form>
+<br>
+
+<h2> Send encrypt message Posts to Messenga </h2>
+	<form action="https://messenga.net:8080/encrypt" method="post" enctype="text">
+    <button type="submit" name="email" value="itzbobwright@gmail.com" style="background:#fc7aed"><h3> Encrypt a message </h3></button>
+  </form>
+	<form action="https://messenga.net:8080/encryptsign" method="post" enctype="text">
+    <button type="submit" name="email" value="itzbobwright@gmail.com messenga@messenga.net" style="background:#fc7aed"><h3> Encrypt and sign a message (user as encrypter messenga as signer) </h3></button>
+  </form>
+	<form action="https://messenga.net:8080/sign" method="post" enctype="text">
+    <button type="submit" name="email" value="syntheticreality@syntheticreality.net" style="background:#fc7aed"><h3> Sign a plaintext message (syntheticreality as signer) </h3></button>
+  </form>
+<br>
+
+<h2> Send decrypt message Posts to Messenga </h2>
+	<form action="https://messenga.net:8080/decrypt" method="post" enctype="text">
+    <button type="submit" name="email" value="itzbobwright@gmail.com" style="background:#86ffa8;"><h3> Decrypt a message </h3></button>
+  </form>
+	<form action="https://messenga.net:8080/decryptverify" method="post" enctype="text">
+    <button type="submit" name="email" value="itzbobwright@gmail.com messenga@messenga.net" style="background:#86ffa8;"><h3> Decrypt and verify a message (user as encrypter messenga as signer) </h3></button>
+  </form>
+	<form action="https://messenga.net:8080/verify" method="post" enctype="text">
+    <button type="submit" name="email" value="syntheticreality@syntheticreality.net" style="background:#86ffa8;"><h3> Verify a signed plaintext message </h3></button>
+  </form>
+<br>
+</div>
+</main></body></html>
