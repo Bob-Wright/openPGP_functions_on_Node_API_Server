@@ -1,0 +1,24 @@
+[Unit]
+Description="nodeserver Service"
+#Requires=After=mongod.service       # Requires the mongoDB service to run first
+
+[Service]
+ExecStart=/usr/bin/node /home/ubuntu/portalPGP/server.js
+# Required on some systems
+WorkingDirectory=/home/ubuntu/portalPGP
+Restart=always
+# Restart service after 10 seconds if node service crashes
+RestartSec=10
+#User=<alternate user>
+#Group=<alternate group>
+#User=nobody
+#Group=nogroup
+#User=ubuntu
+#Group=ubuntu
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nodeserver
+Environment=NODE_ENV=production PORT=8080
+
+[Install]
+WantedBy=multi-user.target
