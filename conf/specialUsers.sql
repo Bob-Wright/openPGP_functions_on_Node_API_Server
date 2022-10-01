@@ -1,0 +1,3 @@
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `factors`, `link`, `password`, `token`, `gatekeeper`, `is_active`, `created`, `modified`, `views`, `posts`) VALUES (NULL, 'Synthetic', 'Reality', 'synthetic.reality@syntheticreality.net', 'AnotherUniqueAndCleverPassphrase', '24.99.155.211', '$2y$', 'fa2a', 'syntheticreality', '1', '2022-04-29 18:24:49', '2022-05-02 17:46:54', '0', '0');
+
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `factors`, `link`, `password`, `token`, `gatekeeper`, `is_active`, `created`, `modified`, `views`, `posts`) VALUES (NULL, 'Messen', 'Ga', 'messenga@messenga.net', 'AUniqueAndCleverPassphrase', '24.99.155.211', '10$JA5X.', 'bcce428', 'messenga', '1', '2022-04-29 18:24:49', '2022-05-02 17:46:54', '0', '0');
